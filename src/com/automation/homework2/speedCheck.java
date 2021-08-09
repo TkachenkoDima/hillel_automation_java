@@ -25,7 +25,7 @@ public class speedCheck {
 //  Input seconds: 23
 
         float speedInMetersPerSecond = meters / ((hours * 3600) + (minutes * 60) + seconds);
-        double speedInKmPerHours = (meters / 1000) / (hours + (minutes / 60) + (seconds / 3600));
+        float speedInKmPerHours = (meters / 1000) / (hours + (minutes / 60) + (seconds / 3600));
 
         System.out.println("Your speed in meters/second is " + speedInMetersPerSecond);
         System.out.println("Your speed in km/h is " + speedInKmPerHours);
