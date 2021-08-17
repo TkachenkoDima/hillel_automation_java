@@ -2,7 +2,7 @@ package com.automation.homework2;
 
 import java.util.Scanner;
 
-public class bodyMassConverter {
+public class BodyMassConverter {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

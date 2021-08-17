@@ -2,7 +2,7 @@ package com.automation.homework2;
 
 import java.util.Scanner;
 
-public class minutesToDaysConverter {
+public class MinutesToDaysConverter {
 
     public static void main(String[] args) {
 

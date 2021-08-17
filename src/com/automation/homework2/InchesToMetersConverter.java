@@ -2,7 +2,7 @@ package com.automation.homework2;
 
 import java.util.Scanner;
 
-public class inchesToMetersConverter {
+public class InchesToMetersConverter {
 
     public static void main(String[] args) {
 

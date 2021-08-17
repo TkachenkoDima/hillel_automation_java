@@ -2,7 +2,7 @@ package com.automation.homework2;
 
 import java.util.Scanner;
 
-public class speedCheck {
+public class SpeedCheck {
 
     public static void main(String[] args) {
 
