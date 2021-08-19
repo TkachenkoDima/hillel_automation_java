@@ -8,8 +8,8 @@ public class task2 {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter daytime and check response:");
-        int dayTime = input.nextInt();
 
+        int dayTime = input.nextInt();
 
         if ((dayTime >= 18) && (dayTime <= 24)) {
             System.out.println("Good evening");
