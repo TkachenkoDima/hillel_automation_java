@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PassValidator {
 
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         System.out.println("Knock knock, NEO! Enter Pass:");
 
