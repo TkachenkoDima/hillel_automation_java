@@ -6,11 +6,9 @@ public class task5 {
 
     public static void main(String[] args) {
 
-        String Username;
-        String Password;
 
-        Username = "Dima";
-        Password = "kek";
+        String Username = "Dima";
+        String Password = "kek";
 
         Scanner scan1 = new Scanner(System.in);
         System.out.println("username : ");
