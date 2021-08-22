@@ -6,24 +6,23 @@ public class task5 {
 
     public static void main(String[] args) {
 
-
         String Username = "Dima";
         String Password = "kek";
 
         Scanner scan1 = new Scanner(System.in);
         System.out.println("username : ");
-        String username = scan1.next();
+        String user = scan1.nextLine();
 
         Scanner scan2 = new Scanner(System.in);
         System.out.println("password : ");
-        String password = scan2.next();
+        String pass = scan2.nextLine();
 
-        if (username.equals(Username) && password.equals(Password)) {
+        if (user.equals(Username) && pass.equals(Password)) {
 
             System.out.println("Welcome!");
-        } else if (username.equals(Username)) {
+        } else if (user.equals(Username)) {
             System.out.println("Invalid password!");
-        } else if (password.equals(Password)) {
+        } else if (pass.equals(Password)) {
             System.out.println("Invalid username!");
         } else {
             System.out.println("Invalid username & password!");
