@@ -1,4 +1,4 @@
-package homework4;
+package homework4.TasksFromPresentation;
 
 import java.util.Scanner;
 
