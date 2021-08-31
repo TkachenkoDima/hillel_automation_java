@@ -2,7 +2,7 @@ package homework4;
 
 import java.util.Scanner;
 
-public class Task5 {
+public class Task5_HW4 {
     public static void main(String[] args) {
 
 //      1st method by given array.

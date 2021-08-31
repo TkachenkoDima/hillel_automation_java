@@ -2,7 +2,7 @@ package homework3.TasksFromPresentation;
 
 import java.util.Scanner;
 
-public class Task4 {
+public class Task4_HW3 {
 
     public static void main(String[] args) {
 
