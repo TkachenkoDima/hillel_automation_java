@@ -22,14 +22,15 @@ public class Task5_HW4 {
 //      2nd method by user input.
         System.out.println("Enter count of numbers: ");
         Scanner scanner = new Scanner(System.in);
+
         int n = scanner.nextInt();
 
         double[] arr = new double[n];
         double total = 0;
 
-        for(int i=0; i<arr.length; i++){
+        for(int i = 0; i < arr.length; i++){
             System.out.print("Enter " + (i+1) + " number: ");
-            arr[i] = scanner.nextDouble();
+            arr[i] = scanner.nextInt();
         }
         scanner.close();
 

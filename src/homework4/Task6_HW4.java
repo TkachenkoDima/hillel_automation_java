@@ -19,24 +19,26 @@ public class Task6_HW4 {
             if (input.hasNextInt()) {
                 dots = input.nextInt();
 
-                for(int i = 0; i < dots; i++){
+                for(int i = 0; i < dots; i++) {
 
-                    for(int j= lines; j>0; j--){
+                    for(int j = lines; j > 0; j--) {
                         System.out.print("#");
                     }
                     System.out.println();
                     lines += 1;
                 }
-                    if (dots < 0) {
+                if (dots < 0) {
                     System.out.print("Please enter a positive number: ");
                 }
-                    else {
+                else {
                     isNumber = true;
                 }
-            } else {
+            }
+            else {
                 System.out.print("Please enter a valid number: ");
                 input.next();
             }
-        } while (!(isNumber));
+        }
+        while (!(isNumber));
     }
 }

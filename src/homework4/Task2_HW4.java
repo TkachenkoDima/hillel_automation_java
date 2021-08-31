@@ -15,11 +15,9 @@ public class Task2_HW4 {
 
         int result = 1;
 
-         for(int i = 1; i <= power; i++)
-        {
-	    result *= firstNum;
-        }
-
+         for(int i = 1; i <= power; i++) {
+	        result *= firstNum;
+         }
         System.out.println(firstNum + " raised to the power of " + power + " = " + result);
     }
 }
