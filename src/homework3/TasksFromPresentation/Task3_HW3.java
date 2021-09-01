@@ -32,6 +32,8 @@ public class Task3_HW3 {
             case "7":
                 System.out.println("Sunday");
                 break;
+            default:
+                System.out.println("kek");
         }
     }
 }

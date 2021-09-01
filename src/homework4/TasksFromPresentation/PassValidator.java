@@ -15,7 +15,7 @@ public class PassValidator {
             String inputPass = input.nextLine();
 
             if ((counter == 3) && !inputPass.equals(correctPass)) {
-                System.out.println("Sorry, Mr.Andersen, you are busted.");
+                System.out.println("Sorry, Mr.Anderson, you are busted.");
                 return;
             } else if (!inputPass.equals(correctPass)) {
                 System.out.println("Wrong pass, try again");

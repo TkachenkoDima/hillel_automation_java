@@ -12,7 +12,6 @@ public class SeasonFinder {
         System.out.println("Enter month number to know what season is it: ");
         String month = input.nextLine();
 
-
         Map<Integer, String> monthes = new HashMap();
         monthes.put(1, "January");
         monthes.put(2, "February");
