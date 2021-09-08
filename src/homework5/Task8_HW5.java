@@ -18,6 +18,6 @@ public class Task8_HW5 {
     }
 
     public static void printStars() {
-        System.out.print("#");
+        System.out.print("*");
     }
 }

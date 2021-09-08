@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Task7_HW5 {
     public static void main(String[] args) {
 
-
-        int lines = 2;
+        int lines = 1;
 
         System.out.print("Enter the number of dots: ");
         stairs(lines);

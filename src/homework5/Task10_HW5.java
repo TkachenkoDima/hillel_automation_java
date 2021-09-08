@@ -3,6 +3,7 @@ package homework5;
 import java.util.Scanner;
 
 public class Task10_HW5 {
+    
     public static void main(String[] args) {
 
         separatedArray();

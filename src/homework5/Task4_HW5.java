@@ -10,8 +10,8 @@ public class Task4_HW5 {
 
     public static int arraySum(int [] inputArr, int sum) {
         for (int i : inputArr) {
-         sum = sum + i;
+            sum = sum + i;
         }
         return sum;
-        }
+    }
 }

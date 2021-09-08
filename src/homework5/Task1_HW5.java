@@ -25,8 +25,7 @@ public class Task1_HW5 {
         for (int i = 0; i < array.length; i++) {
             if (i == array.length - 1) {
                 System.out.println(array[i]);
-            }
-            else {
+            } else {
                 System.out.print(array[i] + " ");
             }
         }
