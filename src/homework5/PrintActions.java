@@ -31,9 +31,18 @@ public class PrintActions {
             if (i == array.length - 1) {
                 System.out.println(array[i]);
             } else {
-                System.out.print(array[i] + " ");
+                System.out.print(array[i] + ", ");
             }
         }
+    }
+
+    public static void separatedArray() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many random numbers separated with comma u wanna see on output?: ");
+        int size = scan.nextInt();
+        int[] num = PrintActions.createRandomArray(size);
+        PrintActions.printRandomArray(num);
+
     }
 
     public static int sumRandomArray(int[] array) {
