@@ -1,6 +1,6 @@
 package homework4;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Task5_HW4 {
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Task5_HW4 {
 
 
 //      2nd method by user input.
-//        System.out.println("Enter count of numbers: ");
+        System.out.println("Enter count of numbers: ");
 //        Scanner scanner = new Scanner(System.in);
 //
 //        int n = scanner.nextInt();
