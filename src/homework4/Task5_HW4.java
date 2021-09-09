@@ -1,46 +1,21 @@
 package homework4;
 
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Task5_HW4 {
-    public static void main(String[] args) {
 
-//      1st method by given array.
+        public static void main(String[] args) {
+            double[] inputArr = new double[]{1.1D, 2.2D, 3.0D, 4.0D, 5.0D, 6.0D, 7.0D, 8.0D, 9.0D};
+            double arrSum = 0.0D;
+            double[] var4 = inputArr;
+            int var5 = inputArr.length;
 
-        double [] inputArr = new double [] {1.1, 2.2, 3, 4, 5, 6, 7, 8, 9};
+            for(int var6 = 0; var6 < var5; ++var6) {
+                double i = var4[var6];
+                arrSum += i;
+            }
 
-        double arrSum = 0;
-
-        for (double i : inputArr) {
-            arrSum = arrSum + i;
+            double average = arrSum / (double)inputArr.length;
+            System.out.println("Sum of all numbers in the array = " + average);
         }
-        double average = arrSum / inputArr.length;
-
-        System.out.println("Sum of all numbers in the array = " + average);
-
-
-//      2nd method by user input.
-        System.out.println("Enter count of numbers: ");
-//        Scanner scanner = new Scanner(System.in);
-//
-//        int n = scanner.nextInt();
-//
-//        double[] arr = new double[n];
-//        double total = 0;
-//
-//        for(int i = 0; i < arr.length; i++){
-//            System.out.print("Enter " + (i+1) + " number: ");
-//            arr[i] = scanner.nextInt();
-//        }
-//        scanner.close();
-//
-//        for (double v : arr) {
-//            total = total + v;
-//        }
-//
-//        double average = total / arr.length;
-//
-//        System.out.println("The average is: " + average);
     }
-
-}
