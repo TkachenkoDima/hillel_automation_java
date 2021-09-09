@@ -6,12 +6,16 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        System.out.println(isEven(6));
+        System.out.println("Enter the number: ");
+
+        Scanner input = new Scanner(System.in);
+
+        int number = input.nextInt();
+        System.out.println(isEven(number));
     }
 
     public static boolean isEven(int number) {
-        System.out.println("Enter the number: ");
-        Scanner input = new Scanner(System.in);
-        return input.nextInt() % 2 == 0;
+
+        return number % 2 == 0;
     }
 }
