@@ -11,20 +11,24 @@ public class Task9_HW4 {
         do {
             if (input.hasNextInt()) {
                 int num = input.nextInt();
-                int[] arr = new int[num];
-                System.out.println("Enter " + num + " numbers: ");
+                int [] arr = new int[num];
 
-                for (int i = 0; i < arr.length; i++) {
-                    arr[i] = input.nextInt();
+                if (num <= 5 && num !=0 ) {
+                    for (int i = 0; i < arr.length; i++) {
+                        arr[i] = i;
+                    }
+                    for (int j = arr.length - 1; j >= 0; j--)
+                        System.out.print(arr[j]+1 + " ");
+                    System.out.println("Are the numbers you entered in reverse.");
+                    break;
                 }
-                for (int i = arr.length - 1; i >= 0; i--)
-                    System.out.print(arr[i] + " ");
-                System.out.println("are the numbers you entered in reverse.");
-                break;
+                else {
+                    System.out.println("Please input number from 1 to 5: ");
+                }
             }
             else {
                 System.out.println("Try to input only digit.");
-                input.nextLine();
+                input.next();
             }
         }
         while (true);
