@@ -16,7 +16,7 @@ public class Task4_HW3 {
             System.out.println("maximum symbols limit exceeded.");
         }
         else {
-            System.out.println("exampleString value consists of " + outputString + " symbols");
+            System.out.println("Your string consists of " + outputString + " symbols");
         }
     }
 }

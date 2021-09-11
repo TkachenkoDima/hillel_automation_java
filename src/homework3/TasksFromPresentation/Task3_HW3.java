@@ -33,7 +33,7 @@ public class Task3_HW3 {
                 System.out.println("Sunday");
                 break;
             default:
-                System.out.println("kek");
+                System.out.println("There are only 7 days in a week");
         }
     }
 }
