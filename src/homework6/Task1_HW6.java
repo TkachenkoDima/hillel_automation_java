@@ -2,7 +2,7 @@ package homework6;
 
 public class Task1_HW6 {
     public static void main(String[] args) {
-        String toReverse = "some string ";
+        String toReverse = "Hello world";
         System.out.println(reversedString(toReverse));
     }
 
