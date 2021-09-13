@@ -14,6 +14,6 @@ public class Task3_HW6 {
     }
 
     public static String replacer (String myString) {
-        return myString.replaceAll("[^a-zA-Z]", "*");
+        return myString.replaceAll("\\d", "*");
     }
 }
