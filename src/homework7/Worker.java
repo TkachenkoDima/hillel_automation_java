@@ -11,7 +11,6 @@ public class Worker {
     public Worker() {
         int minAge = 15;
         int maxAge = 60;
-
         int minSalary = 100;
         int maxSalary = 10000;
 
