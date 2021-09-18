@@ -1,11 +1,11 @@
-package homework7.Task5;
+package homework7.Task5_compare;
 
 import java.util.Objects;
 
 public class Bikes {
 
-    private final String brand;
-    private final int size;
+    private String brand;
+    private int size;
 
     public Bikes(String brand, int size) {
         this.brand = brand;
@@ -15,9 +15,10 @@ public class Bikes {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Bikes)) return false;
-        Bikes bikes = (Bikes) o;
-        return size == bikes.size && brand.equals(bikes.brand);
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Bikes bike = (Bikes) o;
+        return Objects.equals(brand, bike.brand) && Objects.equals(size, bike.size);
     }
 
     @Override
