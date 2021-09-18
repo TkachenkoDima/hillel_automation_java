@@ -1,4 +1,4 @@
-package homework7.Task5;
+package homework7.Task5_compare;
 
 public class OtherBikes {
 

@@ -14,16 +14,18 @@ public class Worker {
         int minSalary = 100;
         int maxSalary = 10000;
 
+        //initialize default values for Worker class
         name = "Neo";
         age = ThreadLocalRandom.current().nextInt(minAge, maxAge);
         position = "The One";
         salary = ThreadLocalRandom.current().nextInt(minSalary, maxSalary);
     }
-
+    //initialize toString method
     public String toString() {
         return "Name: " + this.name + ", age: " + this.age + ", position: " + this.position + ", salary: " + this.salary;
     }
 
+    //initialize getters and setters
     public String getName() {
         return name;
     }

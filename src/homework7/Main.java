@@ -27,6 +27,7 @@ public class Main {
 
 //Task3
         System.out.println("My dog breed is: " + Dog.getBreed());
+        System.out.println("___");
 
 //Task4
         DeviceConstructor iPhone = new DeviceConstructor();
