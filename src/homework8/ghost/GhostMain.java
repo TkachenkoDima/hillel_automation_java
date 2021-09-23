@@ -1,6 +1,6 @@
-package homework8;
+package homework8.ghost;
 
-public class MainClass extends Ghost{
+public class GhostMain extends Ghost{
 
     public static void main(String[] args) {
         Ghost ghost = new Ghost();
