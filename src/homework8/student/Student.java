@@ -14,12 +14,7 @@ public class Student {
     }
 
     public double getScholarship() {
-        if (averageMark == 5.0) {
-            return 100;
-        }
-        else {
-            return 80;
-        }
+        return averageMark == 5 ? 100 : 80;
     }
 
     public String getFirstName() {
