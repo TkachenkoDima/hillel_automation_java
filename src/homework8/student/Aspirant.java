@@ -9,11 +9,6 @@ public class Aspirant extends Student {
     }
 
     public double getScholarship() {
-        if (averageMark == 5.0) {
-            return 200;
-        }
-        else {
-            return 180;
-        }
+        return averageMark == 5 ? 200 : 180;
     }
 }
