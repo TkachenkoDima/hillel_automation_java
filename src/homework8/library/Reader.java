@@ -2,14 +2,11 @@ package homework8.library;
 
 public class Reader {
 
-    private String fullname;
-    private int libraryCardNumber;
-    private String faculty;
-    private String birthdate;
-    private String phoneNumber;
-
-    public Reader() {
-    }
+    private final String fullname;
+    private final int libraryCardNumber;
+    private final String faculty;
+    private final String birthdate;
+    private final String phoneNumber;
 
     public Reader(String fullname, int libraryCardNumber, String faculty, String birthdate, String phoneNumber) {
         this.fullname = fullname;
@@ -59,46 +56,6 @@ public class Reader {
             System.out.println(book.getName() + ", author - " + book.getAuthor());
         }
         System.out.println();
-    }
-
-    public String getFullname() {
-        return fullname;
-    }
-
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
-    }
-
-    public int getLibraryCardNumber() {
-        return libraryCardNumber;
-    }
-
-    public void setLibraryCardNumber(int libraryCardNumber) {
-        this.libraryCardNumber = libraryCardNumber;
-    }
-
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
-    }
-
-    public String getBirthdate() {
-        return birthdate;
-    }
-
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 }
 
