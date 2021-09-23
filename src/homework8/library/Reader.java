@@ -42,6 +42,7 @@ public class Reader {
 
     public void returnBook(int number) {
         System.out.println(this.fullname + " return " + number + " books.");
+        System.out.println();
     }
 
     public void returnBook(String... books) {
