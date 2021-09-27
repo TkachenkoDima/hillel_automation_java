@@ -1,11 +1,17 @@
 package homework9.vehicles;
 
 public abstract class Bicycle extends Vehicle {
+
     public final int id;
     protected int gear;
 
     public Bicycle(int id, int gear, int speed, String model) {
         super(speed, model);
+        this.id = id;
+        this.gear = gear;
+    }
+
+    public Bicycle (int id, int gear) {
         this.id = id;
         this.gear = gear;
     }
@@ -23,7 +29,6 @@ public abstract class Bicycle extends Vehicle {
 
     @Override
     String applyBreak() {
-        return "drives too fast, need to stop.";
+        return "drives too fast, need to slow down.";
     }
-
 }

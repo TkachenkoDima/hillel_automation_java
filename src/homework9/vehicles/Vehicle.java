@@ -4,13 +4,12 @@ public abstract class Vehicle {
     int speed;
     private String model;
 
+    public Vehicle(){
+    }
+
     public Vehicle(int speed, String model) {
         this.speed = speed;
         this.model = model;
-    }
-
-    public Vehicle(int speed) {
-        this.speed = speed;
     }
 
     int speedUp(int speed) {
@@ -18,19 +17,16 @@ public abstract class Vehicle {
     }
 
     String applyBreak() {
-        return "stop";
+        return "slow down";
     }
 
     String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     abstract public String move();
 
-    final void stop() {
+    final String stop() {
+        return "stop.";
     }
 }
