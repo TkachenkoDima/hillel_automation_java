@@ -26,10 +26,9 @@ public class MainClass {
 
         Car jeep = new Car(100, "Jeep", "out", "automatic");
         Vehicle smart = new Car(3, "Smart");
-        System.out.println();
 
-        System.out.println(jeep.getModel() + " accelerate to " + jeep.speedUp(50) + " km/h" + " then " + jeep.applyBreak());
-        System.out.println(smart.getModel() + " accelerate to " + smart.speedUp(40) + " km/h " + " then" + jeep.applyBreak());
+        System.out.println(jeep.getModel() + " accelerate to " + jeep.speedUp(50) + " km/h then " + jeep.applyBreak() + " and " + jeep.stop());
+        System.out.println(smart.getModel() + " accelerate to " + smart.speedUp(40) + " km/h then " + jeep.applyBreak() + " and " + smart.stop());
         System.out.println();
 
         Helicopter apache1 = new Helicopter(300, "Apache", 20, 1000, 300);
@@ -44,6 +43,7 @@ public class MainClass {
         System.out.println("Comparing objects helicopter1 equals helicopter2: " + apache1.equals(apache2));
         System.out.println("Comparing objects helicopter1 equals helicopter3: " + apache1.equals(apache3) );
         System.out.println("Comparing objects helicopter1 == helicopter2: " + (apache1 == apache2));
+        System.out.println("Comparing objects helicopter1 == helicopter3: " + (apache1 == apache3));
         System.out.println("Comparing objects helicopter3 equals helicopter4: " + apache3.equals(apache4));
 
         System.out.println(apache1.toString());

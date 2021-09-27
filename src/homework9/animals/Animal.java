@@ -1,9 +1,9 @@
 package homework9.animals;
 
 public abstract class Animal {
-    private String food;
-    private String location;
-    private String name;
+    private final String food;
+    private final String location;
+    private final String name;
 
     public Animal(String name, String food, String location) {
         this.name = name;

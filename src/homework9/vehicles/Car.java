@@ -11,11 +11,9 @@ public class Car extends Vehicle {
 
     public Car(int speed, String model, String carType, String transmission) {
         super(speed, model);
-        this.carType = carType;
-        this.transmission = transmission;
+        Car.carType = carType;
+        Car.transmission = transmission;
     }
-
-
 
     @Override
     public String move() {
