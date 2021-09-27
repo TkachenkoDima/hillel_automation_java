@@ -10,8 +10,8 @@ public class Compare {
 
         System.out.println("hashcode of bike1 = " + bike1.hashCode());
         System.out.println("hashcode of bike2 = " + bike2.hashCode());
-        System.out.println("hashcode of bike1 = " + bike3.hashCode());
-        System.out.println("hashcode of bike2 = " + bike4.hashCode());
+        System.out.println("hashcode of bike3 = " + bike3.hashCode());
+        System.out.println("hashcode of bike4 = " + bike4.hashCode());
         System.out.println("Comparing objects bike1 equals bike2: " + bike1.equals(bike2));
         System.out.println("Comparing objects bike1 equals bike3: " + bike1.equals(bike3) );
         System.out.println("Comparing objects bike1 == bike2: " + (bike1 == bike2));
