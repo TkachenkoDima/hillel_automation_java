@@ -4,12 +4,7 @@ public class MainClass {
     public static void main(String[] args) {
 
         MountainBike mountainBike1 = new MountainBike(1, 5, "Spark", 420, 15);
-        Bicycle mountainBike2 = new Bicycle(2, 5, 9, "Voltage") {
-            @Override
-            int changeGear() {
-                return gear * 40 / speed;
-            }
-        };
+        Bicycle mountainBike2 = new MountainBike(2, 5, "Voltage", 380, 20);
         RoadBike roadBike1 = new RoadBike(4, 9, 8, "Addict", -12);
 
         int mountainBikeSeatHeight = mountainBike1.getSeatHeight();
@@ -27,8 +22,8 @@ public class MainClass {
         Car jeep = new Car(100, "Jeep", "out", "automatic");
         Vehicle smart = new Car(3, "Smart");
 
-        System.out.println(jeep.getModel() + " accelerate to " + jeep.speedUp(50) + " km/h then " + jeep.applyBreak() + " and " + jeep.stop());
-        System.out.println(smart.getModel() + " accelerate to " + smart.speedUp(40) + " km/h then " + jeep.applyBreak() + " and " + smart.stop());
+        System.out.println(jeep.move() + " " + jeep.getModel() + " and accelerate to " + jeep.speedUp(50) + " km/h then " + jeep.applyBreak() + " and " + jeep.stop());
+        System.out.println(smart.move() + " " + smart.getModel() + " and accelerate to " + smart.speedUp(40) + " km/h then " + jeep.applyBreak() + " and " + smart.stop());
         System.out.println();
 
         Helicopter apache1 = new Helicopter(300, "Apache", 20, 1000, 300);

@@ -11,11 +11,6 @@ public abstract class Bicycle extends Vehicle {
         this.gear = gear;
     }
 
-    public Bicycle (int id, int gear) {
-        this.id = id;
-        this.gear = gear;
-    }
-
     public String move() {
         return "go go go";
     }
