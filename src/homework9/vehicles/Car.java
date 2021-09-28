@@ -17,6 +17,6 @@ public class Car extends Vehicle {
 
     @Override
     public String move() {
-        return null;
+        return "Engine started, time to speed up this";
     }
 }
