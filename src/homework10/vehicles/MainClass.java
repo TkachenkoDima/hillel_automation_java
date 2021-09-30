@@ -1,4 +1,4 @@
-package homework9.vehicles;
+package homework10.vehicles;
 
 public class MainClass {
     public static void main(String[] args) {
