@@ -1,40 +1,40 @@
 package homework10.vehicles;
 
-import java.util.Objects;
-
 public class Helicopter extends Vehicle {
 
     int amountOfPassengers;
     int maxHeight;
     int tankSize;
+    int vehicleStiffness;
 
-    public Helicopter (int speed, String model, int amounOfPassengers, int maxHeigth, int tankSize) {
+    public Helicopter (int speed, String model, int amountOfPassengers, int maxHeigth, int tankSize, int vehicleStiffness) {
         super(speed, model);
-        this.amountOfPassengers = amounOfPassengers;
         this.maxHeight = maxHeigth;
         this.tankSize = tankSize;
-    }
-    public Helicopter(int speed, String model) {
-        super(speed, model);
+        this.vehicleStiffness = vehicleStiffness;
+        this.amountOfPassengers = amountOfPassengers;
     }
 
     @Override
     public String move() {
-        return null;
+        return "Check that tank fully filled with " + tankSize + " liters and press red button";
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Helicopter that = (Helicopter) o;
-        return amountOfPassengers == that.amountOfPassengers && maxHeight == that.maxHeight && tankSize == that.tankSize;
+    public void calculateStiffness() {
+        super.calculateStiffness(vehicleStiffness);
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(amountOfPassengers, maxHeight, tankSize);
+    public int stop() {
+        return 0;
     }
+
+    @Override
+    public double speedUp(int speed) {
+        return super.speedUp(speed);
+    }
+
 
     @Override
     public String toString() {
