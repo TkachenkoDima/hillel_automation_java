@@ -1,29 +1,28 @@
 package homework10.vehicles;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Factory, Movable {
     int speed;
-    private String model;
+    private final String model;
 
     public Vehicle(int speed, String model) {
         this.speed = speed;
         this.model = model;
     }
 
-    int speedUp(int speed) {
-        return speed * 2;
+    public int getSpeed() {
+        return speed;
     }
 
     String applyBreak() {
         return "slow down";
     }
 
-    String getModel() {
+    public String getModel() {
         return model;
     }
 
     abstract public String move();
 
-    final String stop() {
-        return "stop.";
-    }
+    public abstract void calculateStiffness();
 }
+
