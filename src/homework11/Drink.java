@@ -1,47 +1,33 @@
 package homework11;
 
-/*
-Create enum Dish with food positions available in the Restaurant, ie FOIE_GRAS, BEUF_BOURGUIGNON, QUICHE_LORRAINE, TARTE_TATIN
-Add fields: String name, int price, int preparationTime. Name is a String representation of your dish, ie “Quiche Lorraine” for QUICHE_LORRAINE
-Add abstract method ingredients(); Override it for each element of the enum, it has to print out ingredients for the respective dish.
-Add method getCategory() that returns String “Main Dish” by default. Override this method for the dishes that are not Main Dish (ie “Starter” for FOIE_GRAS, “Dessert” for TARTE_TATIN etc)
-Create class Restaurant. Add method printMenu() which will display menu contents in a format:
-      Category
-      Dish name Dish price
-      Ingredients
-
-Add method selectDish(Dish dish). Print out message with selected dish and expected time
- of its preparation
- */
-
 public enum Drink {
 
     NEGRONI("Negroni cocktail", 250, 5) {
         @Override
         public void ingredients() {
-            System.out.println("Negroni ingredients");
+            System.out.println("Negroni ingredients: 1 ounce gin + 1 ounce Campari + 1 ounce sweet vermouth and Garnish: orange peel");
         }
         @Override
         public void getCategory() {
-            System.out.println("Not main drink");
+            System.out.println("This cocktail not in main menu");
         }
     },
     SOUR ("New York Sour cocktail", 200, 7){
         @Override
         public void ingredients() {
-            System.out.println("Sour ingredients: Bourbon whiskey + Lemon juice + Simple syrup + Red wine");
+            System.out.println("Sour ingredients: 2 ounces rye whiskey or bourbon + 1 ounce lemon juice + 3/4 ounce simple syrup + 1 egg white + 1/2 ounce red wine");
         }
     },
     APEROL("Aperol Spritz cocktail", 180, 3) {
         @Override
         public void ingredients() {
-            System.out.println("Aperol ingredients");
+            System.out.println("Aperol ingredients: Equal parts Aperol + equal parts Cinzano Prosecco + splash of Soda");
         }
     };
 
-    private String name;
-    private int price;
-    private int preparationTime;
+    private final String name;
+    private final int price;
+    private final int preparationTime;
 
     Drink(String name, int price, int preparationTime) {
         this.name = name;
@@ -52,7 +38,7 @@ public enum Drink {
     abstract void ingredients();
 
     public void getCategory() {
-        System.out.println("Main drink");
+        System.out.println("Main menu");
     }
 
     public String getName() {
