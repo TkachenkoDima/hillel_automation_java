@@ -27,6 +27,6 @@ public class TailoringStudio {
     }
 
     public void sizeInfo(Clothes clothes) {
-        System.out.println(clothes.getSize() + " " + clothes.getSize().getEuroSize() + " " + clothes.getSize().getDescription());
+        System.out.println("Size: " + clothes.getSize() + " (euro size: " + clothes.getSize().getEuroSize() + ") -> " + clothes.getSize().getDescription());
     }
 }
