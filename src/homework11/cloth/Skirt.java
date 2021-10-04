@@ -7,10 +7,7 @@ public class Skirt extends Clothes implements WomenCloth{
     }
 
     @Override
-    public String toString() {
-        return "Skirt" +
-                " Size: " + getSize() +
-                ", price: " + getPrice() + " UAH" +
-                ", color: " + getColor();
+    public String clothName() {
+        return Skirt.class.getSimpleName();
     }
 }

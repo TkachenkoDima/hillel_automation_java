@@ -23,15 +23,6 @@ public enum Size {
         return euroSize;
     }
 
-    @Override
-    public String toString() {
-        return name() +
-                " size -> " +
-                "euroSize" + "(" + euroSize + ") " +
-                "is " +
-                getDescription();
-    }
-
     public String getDescription(){
         return "Adult size";
     }

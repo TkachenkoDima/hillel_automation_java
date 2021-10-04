@@ -6,10 +6,8 @@ public class Trousers extends Clothes implements ManCloth, WomenCloth{
         super(size, price, color);
     }
 
-    public String toString() {
-        return "Trousers" +
-                " Size: " + getSize() +
-                ", price: " + getPrice() + " UAH" +
-                ", color: " + getColor();
+    @Override
+    public String clothName() {
+        return Trousers.class.getSimpleName();
     }
 }

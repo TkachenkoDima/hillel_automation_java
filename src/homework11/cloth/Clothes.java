@@ -1,7 +1,7 @@
 package homework11.cloth;
 
 public abstract class Clothes {
-    private Size size;
+    private final Size size;
     public int price;
     public String color;
 
@@ -10,6 +10,8 @@ public abstract class Clothes {
         this.price = cost;
         this.color = color;
     }
+
+    abstract String clothName();
 
     public Size getSize() {
         return size;
@@ -22,6 +24,4 @@ public abstract class Clothes {
     public String getColor() {
         return color;
     }
-
-
 }

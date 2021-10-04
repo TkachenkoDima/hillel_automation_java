@@ -6,10 +6,8 @@ public class TShirt extends Clothes implements ManCloth, WomenCloth {
         super(size, price, color);
     }
 
-    public String toString() {
-        return "T-shirt" +
-                " Size: " + getSize() +
-                ", price: " + getPrice() + " UAH" +
-                ", color: " + getColor();
+    @Override
+    public String clothName() {
+        return TShirt.class.getSimpleName();
     }
 }

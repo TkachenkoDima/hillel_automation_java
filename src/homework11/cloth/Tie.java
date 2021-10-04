@@ -6,10 +6,9 @@ public class Tie extends Clothes implements ManCloth{
         super(size, price, color);
     }
 
-    public String toString() {
-        return "Tie" +
-                " Size: " + getSize() +
-                ", price: " + getPrice() + " UAH" +
-                ", color: " + getColor();
+    @Override
+    public String clothName() {
+        return Tie.class.getSimpleName();
+
     }
 }
