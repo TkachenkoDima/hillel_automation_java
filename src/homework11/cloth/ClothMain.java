@@ -1,6 +1,6 @@
 package homework11.cloth;
 
-public class Main {
+public class ClothMain {
 
     public static void main(String[] args) {
 

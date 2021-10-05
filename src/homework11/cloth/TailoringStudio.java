@@ -6,7 +6,7 @@ public class TailoringStudio {
         for (Clothes cloth : clothes) {
             if (cloth instanceof WomenCloth) {
                 System.out.println(cloth.clothName());
-                sizeInfo(cloth);
+                sizeInfo(cloth.getSize());
                 System.out.println("Price: " + cloth.getPrice());
                 System.out.println("Color: " + cloth.getColor());
                 System.out.println("----------------");
@@ -18,7 +18,7 @@ public class TailoringStudio {
         for (Clothes cloth : clothes) {
             if (cloth instanceof ManCloth) {
                 System.out.println(cloth.clothName());
-                sizeInfo(cloth);
+                sizeInfo(cloth.getSize());
                 System.out.println("Price: " + cloth.getPrice());
                 System.out.println("Color: " + cloth.getColor());
                 System.out.println("----------------");
@@ -26,7 +26,7 @@ public class TailoringStudio {
         }
     }
 
-    public void sizeInfo(Clothes clothes) {
-        System.out.println("Size: " + clothes.getSize() + " (euro size: " + clothes.getSize().getEuroSize() + ") -> " + clothes.getSize().getDescription());
+    public void sizeInfo(Size size) {
+        System.out.println("Size: " + size + " (euro size: " + size.getEuroSize() + ") -> " + size.getDescription());
     }
 }
