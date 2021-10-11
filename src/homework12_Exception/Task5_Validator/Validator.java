@@ -1,18 +1,18 @@
 package homework12_Exception.Task5_Validator;
 
 public class Validator {
-    String login = "Kek";
-    String password = "123";
-    String confirmPassword = "123";
-    String regex = "[a-zA-Z0-9]";
-    int length = 20;
+
+    String regex = "^[a-zA-Z0-9_]{1,20}$";
 
     public boolean loginUser(String login, String password, String confirmPassword) {
         try {
-            if (!login.matches(regex) || login.length() > length || password.length() > length) {
+            if (!login.matches(regex) || !login.equals(login)) {
                 throw new WrongLoginException("Incorrect login");
-            } else if (!password.matches(regex) || !confirmPassword.matches(regex) || !password.equals(confirmPassword)) {
+            } else if (!password.matches(regex) || !confirmPassword.matches(regex) || !password.matches(confirmPassword)) {
                 throw new WrongPasswordException("Incorrect password");
+            }
+            else {
+                System.out.println("Success login. Welcome to the Matrix.");
             }
         } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println(e.getMessage());
