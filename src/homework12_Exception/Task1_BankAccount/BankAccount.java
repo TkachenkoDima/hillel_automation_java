@@ -23,7 +23,6 @@ public class BankAccount {
                 System.out.println("You try to withdraw " + sum);
                 throw new InsufficientFundsException("You don't have enough money on your account, " +
                         "available sum is: ", getBalance());
-
             }
         } catch (InsufficientFundsException | LimitExceededException e) {
             System.out.println(e.getMessage());
