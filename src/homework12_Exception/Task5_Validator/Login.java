@@ -1,6 +1,6 @@
 package homework12_Exception.Task5_Validator;
 
-public class main {
+public class Login {
     public static void main(String[] args) throws WrongLoginException, WrongPasswordException {
         Validator validator = new Validator();
         validator.loginUser("Kek", "123", "123");
