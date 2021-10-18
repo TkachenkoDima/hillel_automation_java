@@ -1,50 +1,40 @@
 package homework13_Classes_exceptions_collections;
 
+import java.util.ArrayList;
+
 public class Parking {
+    private final ArrayList<Vehicle> carList;
 
-    private static final int maxCapacity = 10;
-    private int capacity = 0;
-
-
-    public void printDetails(Vehicle vehicle) {
-        System.out.println(vehicle.getModel() + " " + vehicle.getColor() + " " + vehicle.getPlate() + " is parked.");
+    public Parking() {
+        carList = new ArrayList<>();
     }
 
-    public void availableSpace(Vehicle vehicle) {
-        if (capacity > 0) {
-            System.out.println("car is parked");
-            System.out.println(vehicle.getModel() + " " + vehicle.getColor() + " " + vehicle.getPlate() + " is parked.");
+    public void park(Vehicle vehicle) {
+        if (carList.size() > 10) {
+            System.out.println("There is no free parking lots! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+            System.out.println("=====");
+            return;
         }
-        capacity++;
-        System.out.println(capacity);
-    }
-
-    public void typeCheck(Vehicle vehicle) {
-        if (vehicle instanceof Bike || vehicle instanceof Car) {
-            System.out.println("Passenger type is permitted");
-        } else {
-            System.out.println("Cargo type not permitted");
+        if (vehicle instanceof Car && ((Car) vehicle).getType().equals("cargo")) {
+            System.out.println("No entry for cargo cars! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+            System.out.println("=====");
+            return;
         }
-    }
-
-    public void vehicleTypeCheck(Vehicle vehicle) {
-        if (((Car) vehicle).getType() == "cargo") {
-            System.out.println("No entry for cargo cars!");
-        } else System.out.println("welcome");
-        ;
-    }
-
-    public void bikeCheck(Vehicle vehicle) {
-        if (((Bike) vehicle).getType() == "cargo") {
-            System.out.println("No entry for cargo cars!");
-        } else System.out.println("welcome");
-        ;
-    }
-
-    public void validate(Vehicle vehicle) {
-        if (!VehicleDB.vehicles.contains(vehicle)) {
-            System.out.println("There is no such vehicle in the database!");
+        for (Vehicle v : VehicleDB.getVehiclesFromDB()) {
+            if (v.getPlate().equals(vehicle.getPlate()) && v.getColor().equals(vehicle.getColor())) {
+                carList.add(vehicle);
+                System.out.println("The vehicle with plate " + vehicle.getPlate() + " was parked successfully");
+                System.out.println("=====");
+                return;
+            }
         }
+        System.out.println("There is no such vehicle in the database! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+        System.out.println("=====");
+    }
+
+    public void leaveParking(Vehicle vehicle) {
+        carList.remove(vehicle);
+        System.out.println("The vehicle with plate " + vehicle.getPlate() + " was left the parking");
+        System.out.println("=====");
     }
 }
-
