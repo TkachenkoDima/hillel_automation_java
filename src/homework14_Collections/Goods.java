@@ -2,11 +2,13 @@ package homework14_Collections;
 
 public enum Goods {
 
-    KEK ("kek", 22.2);
+    LAPTOP ("Laptop", 1000),
+    PHONE("Phone", 900),
+    TABLET("Tablet", 800),
+    WATCH("Watch", 700);
 
-
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
     Goods(String name, double price) {
         this.name = name;
