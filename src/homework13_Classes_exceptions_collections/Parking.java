@@ -1,6 +1,6 @@
 package homework13_Classes_exceptions_collections;
 
-import java.util.ArrayList;
+import java.util.Objects;
 
 public class Parking {
 
@@ -35,8 +35,49 @@ public class Parking {
 //        }
 //    }
 
-    public void addVehicles(Vehicle vehicle) {
+    public void availableSapce(Vehicle vehicle) {
         if (capacity > 0) {
+            System.out.println("car is parked");
+            System.out.println(vehicle.getModel() + " " + vehicle.getColor() + " " + vehicle.getPlate() + " is parked.");
+        }
+        capacity ++;
+        System.out.println(capacity);
+    }
+
+    public void isCarNotCargo(Car car) {
+        if (Objects.equals(car.getType(), "passenger")) {
+            System.out.println("Passenger car parked");
+        }
+        else {
+            System.out.println("Cargo type is not permitted");
+        }
+    }
+
+    public void isCarNotCargo(Bike bike) {
+        if (Objects.equals(bike.getType(), "passenger")) {
+            System.out.println("Passenger bike parked");
+        }
+        else {
+            System.out.println("Cargo type is not permitted");
+        }
+    }
+
+    public void typeCheck (Vehicle vehicle) {
+        if (vehicle instanceof Bike || vehicle instanceof Car) {
+            System.out.println("Passenger type is permitted");
+        }
+        else {
+            System.out.println("Cargo type not permitted");
+        }
+    }
+
+    public void isCarInTheList(Vehicle vehicle) {
+        VehicleDB vehicleDB = new VehicleDB();
+        if (vehicle.getPlate().equals(vehicleDB.vehicleList())) {
+            System.out.println("Valid");
+        }
+        else {
+            System.out.println("Go away");
         }
 
     }

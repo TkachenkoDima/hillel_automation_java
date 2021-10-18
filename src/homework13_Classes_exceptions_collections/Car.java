@@ -18,4 +18,9 @@ public class Car extends Vehicle {
     public int getDoors(){
         return doors;
     }
+
+    public String getType() {
+        return type;
+    }
+
 }
