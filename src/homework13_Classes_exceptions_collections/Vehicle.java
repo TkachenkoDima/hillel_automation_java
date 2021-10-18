@@ -18,4 +18,8 @@ public class Vehicle {
     public String getPlate(){
         return plate;
     }
+
+    public String getModel() {
+        return model;
+    }
 }
