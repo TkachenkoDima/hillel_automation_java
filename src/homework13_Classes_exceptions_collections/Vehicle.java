@@ -26,7 +26,5 @@ public class Vehicle {
         return plate;
     }
 
-    public void printDetails() {
-        System.out.println(this.model + " " + this.color + " " + this.plate + " is parked.");
-    }
+
 }

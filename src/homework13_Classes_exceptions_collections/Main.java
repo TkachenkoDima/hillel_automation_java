@@ -5,12 +5,14 @@ public class Main {
 
         Parking parking = new Parking();
 
-        parking.addVehicles(new Car("Smart", "red", "123", 3));
-        parking.addVehicles(new Bike("Suzuki", "black", "000"));
-        parking.addVehicles(new Truck("Kamaz", "grey", "1"));
+        parking.addVehicles(new Car("Smart", "red", "123", 3, "passenger"));
+        parking.addVehicles(new Bike("Suzuki", "black", "000", "passenger"));
+        parking.addVehicles(new Car("Kamaz", "grey", "1", 4, "cargo"));
 
-        System.out.println("parked vehicles: " + parking.left());
+//        System.out.println("parked vehicles: " + parking.left());
+//
+//        System.out.println("available slots: " + parking.available());
 
-        System.out.println("available slots: " + parking.available());
+        parking.printDetails(new Car("Smart", "red", "123", 3, "passenger"));
     }
 }
