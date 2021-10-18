@@ -25,8 +25,8 @@ public class DoMath {
     public void printPrices(Map<String,Double>Convert) {
         for (Map.Entry<String, Double> stringDoubleEntry : Convert.entrySet()) {
             System.out.println("Goods price: "
-                    + ((Map.Entry) stringDoubleEntry).getKey() + " : "
-                    + ((Map.Entry) stringDoubleEntry).getValue() + " UAH");
+                    + stringDoubleEntry.getKey() + " : "
+                    + stringDoubleEntry.getValue() + " UAH");
         }
     }
 }

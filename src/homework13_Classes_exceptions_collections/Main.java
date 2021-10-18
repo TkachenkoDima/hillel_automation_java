@@ -2,20 +2,31 @@ package homework13_Classes_exceptions_collections;
 
 public class Main {
     public static void main(String[] args) {
+        Car redSmart = new Car("smart", "red", "111", "passenger", 3);
+        Car redMitsubishi = new Car("mitsubishi lancer", "red", "222", "passenger", 5);
+        Bike blackSuzuki = new Bike("suzuki", "black", "333");
+        Bike greenKawasaki = new Bike("kawasaki", "green", "444");
+        Car blackAudi = new Car("audi q3", "black", "555", "passenger", 5);
+        Car orangeKamaz = new Car("kamaz", "orange", "666", "cargo", 2);
+        Car yellowSkoda = new Car("skoda fabia", "yellow", "777", "passenger", 3);
 
         Parking parking = new Parking();
+        parking.park(redSmart);
 
-        parking.isCarNotCargo(new Car("Smart", "red", "111", 3, "passenger"));
-        parking.isCarNotCargo(new Bike("Suzuki", "black", "222", "passenger"));
-        parking.isCarNotCargo(new Car("Kamaz", "grey", "333", 4, "cargo"));
+        parking.park(redMitsubishi);
 
-        System.out.println("=====");
-        parking.isCarInTheList(new Car("Smart", "red", "111", 4, "passenger"));
+        parking.park(blackSuzuki);
 
-//        System.out.println("parked vehicles: " + parking.left());
-//
-//        System.out.println("available slots: " + parking.available());
+        parking.park(greenKawasaki);
 
-//        parking.printDetails(new Car("Smart", "red", "123", 3, "passenger"));
+        parking.park(blackAudi);
+
+        parking.park(orangeKamaz);
+
+        parking.park(yellowSkoda);
+
+        parking.leaveParking(blackAudi);
+
+        parking.park(redSmart);
     }
 }

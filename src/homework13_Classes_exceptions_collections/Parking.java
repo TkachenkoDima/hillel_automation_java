@@ -1,84 +1,40 @@
 package homework13_Classes_exceptions_collections;
 
-import java.util.Objects;
+import java.util.ArrayList;
 
 public class Parking {
+    private final ArrayList<Vehicle> carList;
 
-    private static final int maxCapacity = 10;
-    private int capacity = 0;
-
-
-//    private final ArrayList<Vehicle> carArray;
-
-//    public Parking() {
-//        this.carArray = new ArrayList<>(capacity);
-//    }
-
-//    public int available() {
-//        return capacity - this.carArray.size();
-//    }
-//
-//    public int left() {
-//        return this.carArray.size();
-//    }
-
-    public void printDetails(Vehicle vehicle) {
-        System.out.println(vehicle.getModel() + " " + vehicle.getColor() + " " + vehicle.getPlate() + " is parked.");
+    public Parking() {
+        carList = new ArrayList<>();
     }
 
-//    public void addVehicles(Vehicle vehicle) {
-//        if (this.available() > 0) {
-//            this.carArray.add(vehicle);
-//            System.out.println("=====");
-//        } else {
-//            System.out.println("Full");
-//        }
-//    }
-
-    public void availableSapce(Vehicle vehicle) {
-        if (capacity > 0) {
-            System.out.println("car is parked");
-            System.out.println(vehicle.getModel() + " " + vehicle.getColor() + " " + vehicle.getPlate() + " is parked.");
+    public void park(Vehicle vehicle) {
+        if (carList.size() > 10) {
+            System.out.println("There is no free parking lots! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+            System.out.println("=====");
+            return;
         }
-        capacity ++;
-        System.out.println(capacity);
+        if (vehicle instanceof Car && ((Car) vehicle).getType().equals("cargo")) {
+            System.out.println("No entry for cargo cars! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+            System.out.println("=====");
+            return;
+        }
+        for (Vehicle v : VehicleDB.getVehiclesFromDB()) {
+            if (v.getPlate().equals(vehicle.getPlate()) && v.getColor().equals(vehicle.getColor())) {
+                carList.add(vehicle);
+                System.out.println("The vehicle with plate " + vehicle.getPlate() + " was parked successfully");
+                System.out.println("=====");
+                return;
+            }
+        }
+        System.out.println("There is no such vehicle in the database! The vehicle with plate " + vehicle.getPlate() + " was NOT parked");
+        System.out.println("=====");
     }
 
-    public void isCarNotCargo(Car car) {
-        if (Objects.equals(car.getType(), "passenger")) {
-            System.out.println("Passenger car parked");
-        }
-        else {
-            System.out.println("Cargo type is not permitted");
-        }
-    }
-
-    public void isCarNotCargo(Bike bike) {
-        if (Objects.equals(bike.getType(), "passenger")) {
-            System.out.println("Passenger bike parked");
-        }
-        else {
-            System.out.println("Cargo type is not permitted");
-        }
-    }
-
-    public void typeCheck (Vehicle vehicle) {
-        if (vehicle instanceof Bike || vehicle instanceof Car) {
-            System.out.println("Passenger type is permitted");
-        }
-        else {
-            System.out.println("Cargo type not permitted");
-        }
-    }
-
-    public void isCarInTheList(Vehicle vehicle) {
-        VehicleDB vehicleDB = new VehicleDB();
-        if (vehicle.getPlate().equals(vehicleDB.vehicleList())) {
-            System.out.println("Valid");
-        }
-        else {
-            System.out.println("Go away");
-        }
-
+    public void leaveParking(Vehicle vehicle) {
+        carList.remove(vehicle);
+        System.out.println("The vehicle with plate " + vehicle.getPlate() + " was left the parking");
+        System.out.println("=====");
     }
 }
