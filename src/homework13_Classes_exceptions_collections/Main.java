@@ -5,17 +5,10 @@ public class Main {
 
         Parking parking = new Parking();
 
-        parking.isCarNotCargo(new Car("Smart", "red", "111", 3, "passenger"));
-        parking.isCarNotCargo(new Bike("Suzuki", "black", "222", "passenger"));
-        parking.isCarNotCargo(new Car("Kamaz", "grey", "333", 4, "cargo"));
+        parking.vehicleTypeCheck(new Car("Smart", "red", "111", 3, "passenger"));
+//        parking.vehicleTypeCheck(new Car("Kamaz", "grey", "333", 4, "cargo"));
+//        parking.bikeCheck(new Bike("Suzuki", "black", "222", "passenger"));
+        parking.validate(new Car("Smart", "red", "111", 3, "passenger"));
 
-        System.out.println("=====");
-        parking.isCarInTheList(new Car("Smart", "red", "111", 4, "passenger"));
-
-//        System.out.println("parked vehicles: " + parking.left());
-//
-//        System.out.println("available slots: " + parking.available());
-
-//        parking.printDetails(new Car("Smart", "red", "123", 3, "passenger"));
     }
 }
