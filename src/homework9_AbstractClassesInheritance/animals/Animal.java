@@ -9,7 +9,6 @@ public abstract class Animal {
         this.name = name;
         this.food = food;
         this.location = location;
-
     }
 
     public abstract String makeNoise();
